@@ -7,6 +7,8 @@ public partial class EvaluacionFisica
 {
     public long EvaluacionFisicaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SocioId { get; set; }
 
     public int? InstructorId { get; set; }
@@ -37,9 +39,11 @@ public partial class EvaluacionFisica
 
     public string? Observaciones { get; set; }
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual Instructor? Instructor { get; set; }
 
     public virtual Socio Socio { get; set; } = null!;
 
-    public virtual Usuario UsuarioRegistro { get; set; } = null!;
+    public virtual Usuario Usuario { get; set; } = null!;
 }

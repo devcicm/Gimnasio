@@ -7,6 +7,8 @@ public partial class HorarioClase
 {
     public long HorarioClaseId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SucursalId { get; set; }
 
     public int ClaseId { get; set; }

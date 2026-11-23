@@ -7,6 +7,8 @@ public partial class HistorialNotificacion
 {
     public long HistorialNotificacionId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long NotificacionId { get; set; }
 
     public DateTime FechaIntento { get; set; }

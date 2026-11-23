@@ -7,6 +7,8 @@ public partial class Comunicado
 {
     public long ComunicadoId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int? SucursalId { get; set; }
 
     public int UsuarioCreadorId { get; set; }
@@ -25,7 +27,9 @@ public partial class Comunicado
 
     public virtual ICollection<ComunicadoLectura> ComunicadoLecturas { get; set; } = new List<ComunicadoLectura>();
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual Sucursal? Sucursal { get; set; }
 
-    public virtual Usuario UsuarioCreador { get; set; } = null!;
+    public virtual Usuario Usuario { get; set; } = null!;
 }

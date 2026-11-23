@@ -7,6 +7,8 @@ public partial class MovimientoInventario
 {
     public long MovimientoInventarioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SucursalId { get; set; }
 
     public int ProductoId { get; set; }
@@ -33,11 +35,13 @@ public partial class MovimientoInventario
 
     public virtual CompraProveedor? CompraProveedor { get; set; }
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual Producto Producto { get; set; } = null!;
 
     public virtual Sucursal Sucursal { get; set; } = null!;
 
     public virtual Usuario Usuario { get; set; } = null!;
 
-    public virtual Ventum? Venta { get; set; }
+    public virtual Ventum? Ventum { get; set; }
 }

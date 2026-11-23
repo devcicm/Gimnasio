@@ -7,6 +7,8 @@ public partial class PerfilGimnasio
 {
     public int PerfilGimnasioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public string NombreComercial { get; set; } = null!;
 
     public string? RazonSocial { get; set; }
@@ -34,4 +36,6 @@ public partial class PerfilGimnasio
     public bool Activo { get; set; }
 
     public byte[] Version { get; set; } = null!;
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 }

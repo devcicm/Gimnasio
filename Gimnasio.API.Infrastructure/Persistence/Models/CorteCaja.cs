@@ -7,6 +7,8 @@ public partial class CorteCaja
 {
     public long CorteCajaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int CajaId { get; set; }
 
     public int UsuarioAperturaId { get; set; }
@@ -31,13 +33,15 @@ public partial class CorteCaja
 
     public virtual Caja Caja { get; set; } = null!;
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual ICollection<MovimientoCaja> MovimientoCajas { get; set; } = new List<MovimientoCaja>();
 
     public virtual ICollection<Pago> Pagos { get; set; } = new List<Pago>();
 
-    public virtual Usuario UsuarioApertura { get; set; } = null!;
+    public virtual Usuario Usuario { get; set; } = null!;
 
-    public virtual Usuario? UsuarioCierre { get; set; }
+    public virtual Usuario? UsuarioNavigation { get; set; }
 
     public virtual ICollection<Ventum> Venta { get; set; } = new List<Ventum>();
 }

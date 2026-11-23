@@ -7,6 +7,8 @@ public partial class MembresiaSucursal
 {
     public int MembresiaSucursalId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int MembresiaSocioId { get; set; }
 
     public int SucursalId { get; set; }

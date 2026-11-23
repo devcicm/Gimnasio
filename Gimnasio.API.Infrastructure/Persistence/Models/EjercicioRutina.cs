@@ -7,6 +7,8 @@ public partial class EjercicioRutina
 {
     public int EjercicioRutinaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int DiaRutinaId { get; set; }
 
     public int EjercicioId { get; set; }
@@ -28,6 +30,8 @@ public partial class EjercicioRutina
     public virtual DiaRutina DiaRutina { get; set; } = null!;
 
     public virtual Ejercicio Ejercicio { get; set; } = null!;
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual ICollection<SeguimientoEjercicio> SeguimientoEjercicios { get; set; } = new List<SeguimientoEjercicio>();
 }

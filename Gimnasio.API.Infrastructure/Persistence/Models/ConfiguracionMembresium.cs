@@ -7,6 +7,8 @@ public partial class ConfiguracionMembresium
 {
     public int ConfiguracionMembresiaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public bool PermitirCambiosPlan { get; set; }
 
     public bool ConservarDiasRestantes { get; set; }
@@ -20,4 +22,6 @@ public partial class ConfiguracionMembresium
     public DateTime? FechaActualizacion { get; set; }
 
     public byte[] Version { get; set; } = null!;
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 }

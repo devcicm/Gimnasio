@@ -7,6 +7,8 @@ public partial class RutinaSocio
 {
     public long RutinaSocioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int RutinaId { get; set; }
 
     public int SocioId { get; set; }
@@ -22,6 +24,8 @@ public partial class RutinaSocio
     public string Estado { get; set; } = null!;
 
     public string? Observaciones { get; set; }
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual Instructor? Instructor { get; set; }
 

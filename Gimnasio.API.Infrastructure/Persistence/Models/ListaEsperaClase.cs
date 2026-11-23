@@ -7,6 +7,8 @@ public partial class ListaEsperaClase
 {
     public long ListaEsperaClaseId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long SesionClaseId { get; set; }
 
     public int SocioId { get; set; }

@@ -7,6 +7,8 @@ public partial class Notificacion
 {
     public long NotificacionId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int TipoNotificacionId { get; set; }
 
     public int? PlantillaNotificacionId { get; set; }
@@ -30,6 +32,8 @@ public partial class Notificacion
     public string Estado { get; set; } = null!;
 
     public string? ErrorEnvio { get; set; }
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual ICollection<HistorialNotificacion> HistorialNotificacions { get; set; } = new List<HistorialNotificacion>();
 

@@ -7,6 +7,8 @@ public partial class ContratacionServicio
 {
     public long ContratacionServicioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int ServicioId { get; set; }
 
     public int SocioId { get; set; }
@@ -37,7 +39,7 @@ public partial class ContratacionServicio
 
     public virtual Sucursal Sucursal { get; set; } = null!;
 
-    public virtual Usuario UsuarioRegistro { get; set; } = null!;
+    public virtual Usuario Usuario { get; set; } = null!;
 
-    public virtual Ventum? Venta { get; set; }
+    public virtual Ventum? Ventum { get; set; }
 }

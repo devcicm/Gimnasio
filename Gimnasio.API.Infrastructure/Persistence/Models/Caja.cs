@@ -7,6 +7,8 @@ public partial class Caja
 {
     public int CajaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SucursalId { get; set; }
 
     public string Nombre { get; set; } = null!;
@@ -18,6 +20,8 @@ public partial class Caja
     public DateTime FechaCreacion { get; set; }
 
     public virtual CorteCaja? CorteCaja { get; set; }
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual Sucursal Sucursal { get; set; } = null!;
 

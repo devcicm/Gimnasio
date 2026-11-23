@@ -7,6 +7,8 @@ public partial class DetalleVentum
 {
     public long DetalleVentaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long VentaId { get; set; }
 
     public int CategoriaVentaId { get; set; }
@@ -31,7 +33,7 @@ public partial class DetalleVentum
 
     public virtual MembresiaSocio? MembresiaSocio { get; set; }
 
-    public virtual PlanMembresium? PlanMembresia { get; set; }
+    public virtual PlanMembresium? PlanMembresium { get; set; }
 
-    public virtual Ventum Venta { get; set; } = null!;
+    public virtual Ventum Ventum { get; set; } = null!;
 }

@@ -7,6 +7,8 @@ public partial class ReservacionServicio
 {
     public long ReservacionServicioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long ContratacionServicioId { get; set; }
 
     public int SocioId { get; set; }
@@ -23,7 +25,5 @@ public partial class ReservacionServicio
 
     public virtual ContratacionServicio ContratacionServicio { get; set; } = null!;
 
-    public virtual Socio Socio { get; set; } = null!;
-
-    public virtual Usuario? UsuarioResponsable { get; set; }
+    public virtual Usuario? Usuario { get; set; }
 }

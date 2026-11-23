@@ -7,6 +7,8 @@ public partial class TraspasoInventario
 {
     public long TraspasoInventarioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SucursalOrigenId { get; set; }
 
     public int SucursalDestinoId { get; set; }
@@ -25,9 +27,11 @@ public partial class TraspasoInventario
 
     public virtual ICollection<DetalleTraspasoInventario> DetalleTraspasoInventarios { get; set; } = new List<DetalleTraspasoInventario>();
 
-    public virtual Sucursal SucursalDestino { get; set; } = null!;
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
-    public virtual Sucursal SucursalOrigen { get; set; } = null!;
+    public virtual Sucursal Sucursal { get; set; } = null!;
+
+    public virtual Sucursal SucursalNavigation { get; set; } = null!;
 
     public virtual Usuario Usuario { get; set; } = null!;
 }

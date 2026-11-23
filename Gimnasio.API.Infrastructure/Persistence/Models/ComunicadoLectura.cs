@@ -7,6 +7,8 @@ public partial class ComunicadoLectura
 {
     public long ComunicadoLecturaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long ComunicadoId { get; set; }
 
     public int? UsuarioId { get; set; }

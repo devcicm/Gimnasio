@@ -7,6 +7,8 @@ public partial class IncidenciaOperativa
 {
     public long IncidenciaOperativaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SucursalId { get; set; }
 
     public int? UsuarioId { get; set; }
@@ -28,6 +30,8 @@ public partial class IncidenciaOperativa
     public string? ObservacionesResolucion { get; set; }
 
     public virtual AreaGimnasio? AreaGimnasio { get; set; }
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual Sucursal Sucursal { get; set; } = null!;
 

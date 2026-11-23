@@ -7,6 +7,8 @@ public partial class AsistenciaClase
 {
     public long AsistenciaClaseId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long ReservacionClaseId { get; set; }
 
     public int? UsuarioRegistroId { get; set; }
@@ -17,5 +19,5 @@ public partial class AsistenciaClase
 
     public virtual ReservacionClase ReservacionClase { get; set; } = null!;
 
-    public virtual Usuario? UsuarioRegistro { get; set; }
+    public virtual Usuario? Usuario { get; set; }
 }

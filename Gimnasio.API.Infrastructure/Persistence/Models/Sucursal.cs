@@ -7,6 +7,8 @@ public partial class Sucursal
 {
     public int SucursalId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public string Nombre { get; set; } = null!;
 
     public string Codigo { get; set; } = null!;
@@ -55,6 +57,8 @@ public partial class Sucursal
 
     public virtual ICollection<ExcepcionHorarioSucursal> ExcepcionHorarioSucursals { get; set; } = new List<ExcepcionHorarioSucursal>();
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual ICollection<HorarioClase> HorarioClases { get; set; } = new List<HorarioClase>();
 
     public virtual ICollection<HorarioSucursal> HorarioSucursals { get; set; } = new List<HorarioSucursal>();
@@ -75,9 +79,9 @@ public partial class Sucursal
 
     public virtual ICollection<Socio> Socios { get; set; } = new List<Socio>();
 
-    public virtual ICollection<TraspasoInventario> TraspasoInventarioSucursalDestinos { get; set; } = new List<TraspasoInventario>();
+    public virtual ICollection<TraspasoInventario> TraspasoInventarioSucursalNavigations { get; set; } = new List<TraspasoInventario>();
 
-    public virtual ICollection<TraspasoInventario> TraspasoInventarioSucursalOrigens { get; set; } = new List<TraspasoInventario>();
+    public virtual ICollection<TraspasoInventario> TraspasoInventarioSucursals { get; set; } = new List<TraspasoInventario>();
 
     public virtual ICollection<UsuarioSucursal> UsuarioSucursals { get; set; } = new List<UsuarioSucursal>();
 

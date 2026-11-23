@@ -7,6 +7,8 @@ public partial class Proveedor
 {
     public int ProveedorId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public string Nombre { get; set; } = null!;
 
     public string? RazonSocial { get; set; }
@@ -34,6 +36,8 @@ public partial class Proveedor
     public DateTime FechaRegistro { get; set; }
 
     public virtual ICollection<CompraProveedor> CompraProveedors { get; set; } = new List<CompraProveedor>();
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual ICollection<ProductoProveedor> ProductoProveedors { get; set; } = new List<ProductoProveedor>();
 }

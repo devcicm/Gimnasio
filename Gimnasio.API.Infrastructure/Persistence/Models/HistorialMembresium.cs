@@ -7,6 +7,8 @@ public partial class HistorialMembresium
 {
     public long HistorialMembresiaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int MembresiaSocioId { get; set; }
 
     public int? UsuarioId { get; set; }

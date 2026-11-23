@@ -7,6 +7,8 @@ public partial class AreaGimnasio
 {
     public int AreaGimnasioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SucursalId { get; set; }
 
     public string Nombre { get; set; } = null!;
@@ -18,6 +20,8 @@ public partial class AreaGimnasio
     public bool Activo { get; set; }
 
     public DateTime FechaCreacion { get; set; }
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual ICollection<IncidenciaOperativa> IncidenciaOperativas { get; set; } = new List<IncidenciaOperativa>();
 

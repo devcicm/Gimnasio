@@ -7,6 +7,8 @@ public partial class Instructor
 {
     public int InstructorId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int? UsuarioId { get; set; }
 
     public string Nombre { get; set; } = null!;
@@ -30,6 +32,8 @@ public partial class Instructor
     public DateTime FechaRegistro { get; set; }
 
     public virtual ICollection<EvaluacionFisica> EvaluacionFisicas { get; set; } = new List<EvaluacionFisica>();
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual ICollection<HorarioClase> HorarioClases { get; set; } = new List<HorarioClase>();
 

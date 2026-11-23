@@ -7,6 +7,8 @@ public partial class Rutina
 {
     public int RutinaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public string Nombre { get; set; } = null!;
 
     public string? Descripcion { get; set; }
@@ -25,7 +27,9 @@ public partial class Rutina
 
     public virtual ICollection<DiaRutina> DiaRutinas { get; set; } = new List<DiaRutina>();
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual ICollection<RutinaSocio> RutinaSocios { get; set; } = new List<RutinaSocio>();
 
-    public virtual Usuario UsuarioCreador { get; set; } = null!;
+    public virtual Usuario Usuario { get; set; } = null!;
 }

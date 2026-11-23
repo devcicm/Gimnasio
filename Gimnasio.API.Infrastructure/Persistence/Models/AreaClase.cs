@@ -7,6 +7,8 @@ public partial class AreaClase
 {
     public int AreaClaseId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SucursalId { get; set; }
 
     public string Nombre { get; set; } = null!;

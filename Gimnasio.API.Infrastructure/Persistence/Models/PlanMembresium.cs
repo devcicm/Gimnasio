@@ -7,6 +7,8 @@ public partial class PlanMembresium
 {
     public int PlanMembresiaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public string Nombre { get; set; } = null!;
 
     public string? Descripcion { get; set; }
@@ -28,6 +30,8 @@ public partial class PlanMembresium
     public byte[] Version { get; set; } = null!;
 
     public virtual ICollection<DetalleVentum> DetalleVenta { get; set; } = new List<DetalleVentum>();
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual ICollection<MembresiaSocio> MembresiaSocios { get; set; } = new List<MembresiaSocio>();
 }

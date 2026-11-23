@@ -7,6 +7,8 @@ public partial class Ejercicio
 {
     public int EjercicioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int GrupoMuscularId { get; set; }
 
     public string Nombre { get; set; } = null!;
@@ -26,6 +28,8 @@ public partial class Ejercicio
     public bool Activo { get; set; }
 
     public virtual ICollection<EjercicioRutina> EjercicioRutinas { get; set; } = new List<EjercicioRutina>();
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual GrupoMuscular GrupoMuscular { get; set; } = null!;
 }

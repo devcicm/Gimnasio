@@ -7,6 +7,8 @@ public partial class ActividadProgramadum
 {
     public long ActividadProgramadaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int ActividadId { get; set; }
 
     public int SucursalId { get; set; }
@@ -29,5 +31,5 @@ public partial class ActividadProgramadum
 
     public virtual Sucursal Sucursal { get; set; } = null!;
 
-    public virtual Usuario UsuarioResponsable { get; set; } = null!;
+    public virtual Usuario Usuario { get; set; } = null!;
 }

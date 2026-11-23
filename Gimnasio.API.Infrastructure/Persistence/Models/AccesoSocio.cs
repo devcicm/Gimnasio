@@ -7,6 +7,8 @@ public partial class AccesoSocio
 {
     public long AccesoSocioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SocioId { get; set; }
 
     public int? MembresiaSocioId { get; set; }

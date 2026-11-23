@@ -5,6 +5,8 @@ namespace Gimnasio.API.Infrastructure.Persistence.Models;
 
 public partial class UsuarioSucursal
 {
+    public int GimnasioId { get; set; }
+
     public int UsuarioId { get; set; }
 
     public int SucursalId { get; set; }

@@ -7,6 +7,8 @@ public partial class SeguimientoEjercicio
 {
     public long SeguimientoEjercicioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long RutinaSocioId { get; set; }
 
     public int EjercicioRutinaId { get; set; }
@@ -24,6 +26,8 @@ public partial class SeguimientoEjercicio
     public string? Observaciones { get; set; }
 
     public virtual EjercicioRutina EjercicioRutina { get; set; } = null!;
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual RutinaSocio RutinaSocio { get; set; } = null!;
 }

@@ -7,6 +7,8 @@ public partial class ParametroConfiguracion
 {
     public int ParametroConfiguracionId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public string Clave { get; set; } = null!;
 
     public string? Valor { get; set; }
@@ -18,4 +20,6 @@ public partial class ParametroConfiguracion
     public bool Activo { get; set; }
 
     public DateTime FechaActualizacion { get; set; }
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 }

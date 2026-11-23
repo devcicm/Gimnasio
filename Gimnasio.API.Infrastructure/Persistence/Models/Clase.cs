@@ -7,6 +7,8 @@ public partial class Clase
 {
     public int ClaseId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int TipoClaseId { get; set; }
 
     public string Nombre { get; set; } = null!;
@@ -18,6 +20,8 @@ public partial class Clase
     public bool Activo { get; set; }
 
     public DateTime FechaCreacion { get; set; }
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual ICollection<HorarioClase> HorarioClases { get; set; } = new List<HorarioClase>();
 

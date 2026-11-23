@@ -7,6 +7,8 @@ public partial class SesionClase
 {
     public long SesionClaseId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long HorarioClaseId { get; set; }
 
     public DateOnly Fecha { get; set; }

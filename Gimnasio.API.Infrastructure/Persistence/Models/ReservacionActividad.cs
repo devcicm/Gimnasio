@@ -7,6 +7,8 @@ public partial class ReservacionActividad
 {
     public long ReservacionActividadId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long ActividadProgramadaId { get; set; }
 
     public int SocioId { get; set; }
@@ -17,7 +19,7 @@ public partial class ReservacionActividad
 
     public string? Observaciones { get; set; }
 
-    public virtual ActividadProgramadum ActividadProgramada { get; set; } = null!;
+    public virtual ActividadProgramadum ActividadProgramadum { get; set; } = null!;
 
     public virtual AsistenciaActividad? AsistenciaActividad { get; set; }
 

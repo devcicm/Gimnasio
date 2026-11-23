@@ -7,6 +7,8 @@ public partial class Producto
 {
     public int ProductoId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int CategoriaProductoId { get; set; }
 
     public int? MarcaId { get; set; }
@@ -47,6 +49,8 @@ public partial class Producto
 
     public virtual ICollection<DetalleTraspasoInventario> DetalleTraspasoInventarios { get; set; } = new List<DetalleTraspasoInventario>();
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual ICollection<InventarioSucursal> InventarioSucursals { get; set; } = new List<InventarioSucursal>();
 
     public virtual Marca? Marca { get; set; }
@@ -55,5 +59,5 @@ public partial class Producto
 
     public virtual ICollection<ProductoProveedor> ProductoProveedors { get; set; } = new List<ProductoProveedor>();
 
-    public virtual UnidadMedidum UnidadMedida { get; set; } = null!;
+    public virtual UnidadMedidum UnidadMedidum { get; set; } = null!;
 }

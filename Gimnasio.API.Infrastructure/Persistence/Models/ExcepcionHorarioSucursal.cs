@@ -7,6 +7,8 @@ public partial class ExcepcionHorarioSucursal
 {
     public int ExcepcionHorarioSucursalId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SucursalId { get; set; }
 
     public DateOnly Fecha { get; set; }
@@ -20,6 +22,8 @@ public partial class ExcepcionHorarioSucursal
     public string? Motivo { get; set; }
 
     public DateTime FechaCreacion { get; set; }
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual Sucursal Sucursal { get; set; } = null!;
 }

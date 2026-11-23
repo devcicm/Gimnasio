@@ -7,6 +7,8 @@ public partial class Documento
 {
     public long DocumentoId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int CategoriaDocumentoId { get; set; }
 
     public int? SocioId { get; set; }
@@ -39,11 +41,13 @@ public partial class Documento
 
     public virtual CategoriaDocumento CategoriaDocumento { get; set; } = null!;
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual Socio? Socio { get; set; }
 
     public virtual Sucursal? Sucursal { get; set; }
 
-    public virtual Usuario? Usuario { get; set; }
+    public virtual Usuario Usuario { get; set; } = null!;
 
-    public virtual Usuario UsuarioCarga { get; set; } = null!;
+    public virtual Usuario? UsuarioNavigation { get; set; }
 }

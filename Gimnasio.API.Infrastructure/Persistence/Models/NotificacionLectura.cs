@@ -7,6 +7,8 @@ public partial class NotificacionLectura
 {
     public long NotificacionLecturaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long NotificacionId { get; set; }
 
     public int? UsuarioId { get; set; }

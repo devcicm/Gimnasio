@@ -7,6 +7,8 @@ public partial class ObjetivoFisico
 {
     public long ObjetivoFisicoId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SocioId { get; set; }
 
     public string TipoObjetivo { get; set; } = null!;
@@ -26,6 +28,8 @@ public partial class ObjetivoFisico
     public DateOnly? FechaCumplimiento { get; set; }
 
     public string Estado { get; set; } = null!;
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual ICollection<HistorialObjetivoFisico> HistorialObjetivoFisicos { get; set; } = new List<HistorialObjetivoFisico>();
 

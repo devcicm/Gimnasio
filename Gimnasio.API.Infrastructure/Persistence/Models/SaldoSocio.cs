@@ -7,6 +7,8 @@ public partial class SaldoSocio
 {
     public long SaldoSocioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SocioId { get; set; }
 
     public long? VentaId { get; set; }
@@ -21,9 +23,11 @@ public partial class SaldoSocio
 
     public int UsuarioId { get; set; }
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual Socio Socio { get; set; } = null!;
 
     public virtual Usuario Usuario { get; set; } = null!;
 
-    public virtual Ventum? Venta { get; set; }
+    public virtual Ventum? Ventum { get; set; }
 }

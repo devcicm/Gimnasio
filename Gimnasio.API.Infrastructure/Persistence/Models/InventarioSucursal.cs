@@ -7,6 +7,8 @@ public partial class InventarioSucursal
 {
     public long InventarioSucursalId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SucursalId { get; set; }
 
     public int ProductoId { get; set; }
@@ -18,6 +20,8 @@ public partial class InventarioSucursal
     public DateTime FechaActualizacion { get; set; }
 
     public byte[] Version { get; set; } = null!;
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual Producto Producto { get; set; } = null!;
 

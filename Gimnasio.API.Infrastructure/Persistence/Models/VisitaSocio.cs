@@ -7,6 +7,8 @@ public partial class VisitaSocio
 {
     public long VisitaSocioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SocioId { get; set; }
 
     public int SucursalId { get; set; }
@@ -24,6 +26,8 @@ public partial class VisitaSocio
     public string? Observaciones { get; set; }
 
     public virtual AreaGimnasio? AreaGimnasio { get; set; }
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual MembresiaSocio? MembresiaSocio { get; set; }
 

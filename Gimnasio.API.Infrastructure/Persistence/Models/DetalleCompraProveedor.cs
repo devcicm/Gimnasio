@@ -7,6 +7,8 @@ public partial class DetalleCompraProveedor
 {
     public long DetalleCompraProveedorId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long CompraProveedorId { get; set; }
 
     public int ProductoId { get; set; }
@@ -22,6 +24,8 @@ public partial class DetalleCompraProveedor
     public decimal Importe { get; set; }
 
     public virtual CompraProveedor CompraProveedor { get; set; } = null!;
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual Producto Producto { get; set; } = null!;
 }

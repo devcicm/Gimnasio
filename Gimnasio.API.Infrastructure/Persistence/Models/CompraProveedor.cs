@@ -7,6 +7,8 @@ public partial class CompraProveedor
 {
     public long CompraProveedorId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SucursalId { get; set; }
 
     public int ProveedorId { get; set; }
@@ -30,6 +32,8 @@ public partial class CompraProveedor
     public string? Observaciones { get; set; }
 
     public virtual ICollection<DetalleCompraProveedor> DetalleCompraProveedors { get; set; } = new List<DetalleCompraProveedor>();
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual ICollection<MovimientoInventario> MovimientoInventarios { get; set; } = new List<MovimientoInventario>();
 

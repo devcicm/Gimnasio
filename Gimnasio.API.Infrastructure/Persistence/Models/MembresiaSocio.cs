@@ -7,6 +7,8 @@ public partial class MembresiaSocio
 {
     public int MembresiaSocioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SocioId { get; set; }
 
     public int PlanMembresiaId { get; set; }
@@ -41,19 +43,21 @@ public partial class MembresiaSocio
 
     public virtual ICollection<DetalleVentum> DetalleVenta { get; set; } = new List<DetalleVentum>();
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual ICollection<HistorialMembresium> HistorialMembresia { get; set; } = new List<HistorialMembresium>();
 
-    public virtual ICollection<MembresiaSocio> InverseMembresiaAnterior { get; set; } = new List<MembresiaSocio>();
+    public virtual ICollection<MembresiaSocio> InverseMembresiaSocioNavigation { get; set; } = new List<MembresiaSocio>();
 
-    public virtual MembresiaSocio? MembresiaAnterior { get; set; }
+    public virtual MembresiaSocio? MembresiaSocioNavigation { get; set; }
 
     public virtual ICollection<MembresiaSucursal> MembresiaSucursals { get; set; } = new List<MembresiaSucursal>();
 
-    public virtual PlanMembresium PlanMembresia { get; set; } = null!;
+    public virtual PlanMembresium PlanMembresium { get; set; } = null!;
 
     public virtual Socio Socio { get; set; } = null!;
 
-    public virtual Sucursal SucursalCompra { get; set; } = null!;
+    public virtual Sucursal Sucursal { get; set; } = null!;
 
     public virtual ICollection<VisitaSocio> VisitaSocios { get; set; } = new List<VisitaSocio>();
 }

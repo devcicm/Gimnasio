@@ -7,6 +7,8 @@ public partial class PoliticaGimnasio
 {
     public int PoliticaGimnasioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public string Clave { get; set; } = null!;
 
     public string Nombre { get; set; } = null!;
@@ -18,4 +20,6 @@ public partial class PoliticaGimnasio
     public bool Activo { get; set; }
 
     public DateTime FechaActualizacion { get; set; }
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 }

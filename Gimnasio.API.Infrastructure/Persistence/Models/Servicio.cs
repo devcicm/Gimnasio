@@ -7,6 +7,8 @@ public partial class Servicio
 {
     public int ServicioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int CategoriaServicioId { get; set; }
 
     public string Nombre { get; set; } = null!;

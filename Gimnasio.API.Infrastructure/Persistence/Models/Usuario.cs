@@ -7,6 +7,8 @@ public partial class Usuario
 {
     public int UsuarioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public string Nombre { get; set; } = null!;
 
     public string ApellidoPaterno { get; set; } = null!;
@@ -49,15 +51,17 @@ public partial class Usuario
 
     public virtual ICollection<ContratacionServicio> ContratacionServicios { get; set; } = new List<ContratacionServicio>();
 
-    public virtual ICollection<CorteCaja> CorteCajaUsuarioAperturas { get; set; } = new List<CorteCaja>();
+    public virtual ICollection<CorteCaja> CorteCajaUsuarioNavigations { get; set; } = new List<CorteCaja>();
 
-    public virtual ICollection<CorteCaja> CorteCajaUsuarioCierres { get; set; } = new List<CorteCaja>();
+    public virtual ICollection<CorteCaja> CorteCajaUsuarios { get; set; } = new List<CorteCaja>();
 
-    public virtual ICollection<Documento> DocumentoUsuarioCargas { get; set; } = new List<Documento>();
+    public virtual ICollection<Documento> DocumentoUsuarioNavigations { get; set; } = new List<Documento>();
 
     public virtual ICollection<Documento> DocumentoUsuarios { get; set; } = new List<Documento>();
 
     public virtual ICollection<EvaluacionFisica> EvaluacionFisicas { get; set; } = new List<EvaluacionFisica>();
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual ICollection<HistorialMembresium> HistorialMembresia { get; set; } = new List<HistorialMembresium>();
 

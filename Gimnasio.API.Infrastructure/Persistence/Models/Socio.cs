@@ -7,6 +7,8 @@ public partial class Socio
 {
     public int SocioId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public int SucursalRegistroId { get; set; }
 
     public string Nombre { get; set; } = null!;
@@ -55,6 +57,8 @@ public partial class Socio
 
     public virtual ICollection<EvaluacionFisica> EvaluacionFisicas { get; set; } = new List<EvaluacionFisica>();
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual ICollection<ListaEsperaClase> ListaEsperaClases { get; set; } = new List<ListaEsperaClase>();
 
     public virtual ICollection<MembresiaSocio> MembresiaSocios { get; set; } = new List<MembresiaSocio>();
@@ -69,13 +73,11 @@ public partial class Socio
 
     public virtual ICollection<ReservacionClase> ReservacionClases { get; set; } = new List<ReservacionClase>();
 
-    public virtual ICollection<ReservacionServicio> ReservacionServicios { get; set; } = new List<ReservacionServicio>();
-
     public virtual ICollection<RutinaSocio> RutinaSocios { get; set; } = new List<RutinaSocio>();
 
     public virtual ICollection<SaldoSocio> SaldoSocios { get; set; } = new List<SaldoSocio>();
 
-    public virtual Sucursal SucursalRegistro { get; set; } = null!;
+    public virtual Sucursal Sucursal { get; set; } = null!;
 
     public virtual ICollection<Ventum> Venta { get; set; } = new List<Ventum>();
 

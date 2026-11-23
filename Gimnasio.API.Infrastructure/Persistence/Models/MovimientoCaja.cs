@@ -7,6 +7,8 @@ public partial class MovimientoCaja
 {
     public long MovimientoCajaId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long CorteCajaId { get; set; }
 
     public int UsuarioId { get; set; }
@@ -22,6 +24,8 @@ public partial class MovimientoCaja
     public string? Observaciones { get; set; }
 
     public virtual CorteCaja CorteCaja { get; set; } = null!;
+
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
 
     public virtual Usuario Usuario { get; set; } = null!;
 }

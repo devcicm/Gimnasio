@@ -7,6 +7,8 @@ public partial class Pago
 {
     public long PagoId { get; set; }
 
+    public int GimnasioId { get; set; }
+
     public long VentaId { get; set; }
 
     public int MetodoPagoId { get; set; }
@@ -27,9 +29,11 @@ public partial class Pago
 
     public virtual CorteCaja? CorteCaja { get; set; }
 
+    public virtual CatGimnasio Gimnasio { get; set; } = null!;
+
     public virtual MetodoPago MetodoPago { get; set; } = null!;
 
     public virtual Usuario Usuario { get; set; } = null!;
 
-    public virtual Ventum Venta { get; set; } = null!;
+    public virtual Ventum Ventum { get; set; } = null!;
 }
