@@ -22,15 +22,30 @@ namespace Gimnasio.API.Application.Services
 
         public async Task<ResultadoDto> CrearAsync(CrearUsuarioDto dto)
         {
-            var usuario = new Usuario(dto.Nombre);
-
-            await _usuarioRepository.AgregarAsync(usuario);
-
-            return new ResultadoDto
+            try
             {
-                Exitoso = true,
-                Mensaje = "Usuario registrado correctamente."
-            };
+                var usuario = new Usuario(dto.Nombre, dto.ApellidoPaterno, dto.Correo, dto.GimnasioId, dto.TipoAutenticacion)
+                {
+                    ApellidoMaterno = dto.ApellidoMaterno,
+                    Telefono = dto.Telefono,
+                };
+
+                await _usuarioRepository.AgregarAsync(usuario);
+
+                return new ResultadoDto
+                {
+                    Exitoso = true,
+                    Mensaje = "Usuario registrado correctamente."
+                };
+            }
+            catch (ArgumentException ex)
+            {
+                return new ResultadoDto
+                {
+                    Exitoso = false,
+                    Mensaje = ex.Message
+                };
+            }
         }
     }
 }

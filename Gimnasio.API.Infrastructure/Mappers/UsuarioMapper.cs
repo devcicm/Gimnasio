@@ -9,11 +9,17 @@ using System.Threading.Tasks;
 
 namespace Gimnasio.API.Infrastructure.Mappers
 {
-    [Mapper]
+    /// <summary>
+    /// Mapeo entre la entidad de dominio y el modelo de persistencia.
+    /// RequiredMapping.None: los miembros sin correspondencia (Version rowversion,
+    /// PasswordHash, navegaciones, campos de auditoría) se dejan intencionalmente sin mapear;
+    /// los campos de negocio comparten nombre en ambos lados y se mapean automáticamente.
+    /// </summary>
+    [Mapper(RequiredMappingStrategy = RequiredMappingStrategy.None)]
     public partial class UsuarioMapper
     {
-        public partial Domain.Entities.Usuario ToModel(Persistence.Models.Usuario usuario);
+        public partial Persistence.Models.Usuario ToPersistence(Domain.Entities.Usuario usuario);
 
-        public partial Persistence.Models.Usuario ToDomain(Domain.Entities.Usuario model);
+        public partial Domain.Entities.Usuario ToDomain(Persistence.Models.Usuario model);
     }
 }

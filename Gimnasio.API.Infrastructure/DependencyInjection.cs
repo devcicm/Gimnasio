@@ -1,4 +1,5 @@
 ﻿using Gimnasio.API.Application.Interfaces.Repositories;
+using Gimnasio.API.Infrastructure.Mappers;
 using Gimnasio.API.Infrastructure.Persistence.Context;
 using Gimnasio.API.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -15,10 +16,11 @@ namespace Gimnasio.API.Infrastructure
     public static class DependencyInjection
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
-        {            
+        {
             services.AddDbContext<GimnasioDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("GimnasioConnection")));
 
+            services.AddSingleton<UsuarioMapper>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
             return services;
