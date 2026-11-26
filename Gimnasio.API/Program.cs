@@ -3,6 +3,12 @@ using Gimnasio.API.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configuración por máquina (no versionada): permite que cada entorno
+// (máquina del propietario, máquina de un colaborador, servidor) defina su
+// propia cadena de conexión y nivel de compatibilidad sin editar el repo.
+// Ver appsettings.local.example.json y docs/base-datos/02-retrocompatibilidad-entornos.md
+builder.Configuration.AddJsonFile("appsettings.local.json", optional: true, reloadOnChange: false);
+
 // Add services to the container.
 
 builder.Services.AddControllers();
