@@ -1,18 +1,23 @@
-# 📚 Documentación — Sistema de Gestión de Gimnasios
+# 📚 Documentación — Sistema de Control de Gimnasios
 
 > Stack: **Angular 22** (frontend) · **.NET 8 / C#** (API) · **SQL Server** (base de datos)
 > Enfoque: MVP con **base de datos y dominio primero**. Núcleo ERP **inmutable** + extensible por gimnasio (multi-tenant).
 
+## ⭐ Empieza aquí
+
+**[`00-contexto-y-trasfondo.md`](00-contexto-y-trasfondo.md)** — qué es este proyecto, para qué existe, quién participa, cómo empezó esta etapa y el glosario completo. Escrito para cualquier persona, técnica o no.
+
 ## Mapa de la documentación
 
-| Carpeta / archivo | Contenido |
+| Documento | Contenido |
 |---|---|
+| [`00-contexto-y-trasfondo.md`](00-contexto-y-trasfondo.md) | ⭐ Trasfondo del negocio, historia, principios y glosario |
 | [`convenciones-desarrollo.md`](convenciones-desarrollo.md) | Flujo de trabajo, ramas, PRs, estructura de módulos/features y bitácora |
 | [`roadmap-mvp.md`](roadmap-mvp.md) | Fases del MVP priorizando base de datos y dominio |
 | [`bitacora/`](bitacora/) | Registro cronológico de cada implementación (qué, dónde, por qué) |
 | [`dominio/`](dominio/) | Modelo de dominio: inventario de entidades, núcleo inmutable, extensibilidad, multi-tenancy |
-| [`base-datos/`](base-datos/) | Estándares de BD y migración de SQL Server 2008 → versión actual |
-| [`modulos/`](modulos/) | Un módulo (bounded context) por carpeta, con sus tablas, relaciones y alcance MVP |
+| [`base-datos/`](base-datos/00-estandares.md) | Estándares de BD, migración de SQL Server 2008 → actual y retrocompatibilidad de entornos |
+| [`modulos/`](modulos/README.md) | Un módulo (bounded context) por carpeta, con sus tablas, relaciones y alcance MVP |
 
 ## Reglas de oro
 
